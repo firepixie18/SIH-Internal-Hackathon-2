@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museum Ticket Reservation</title>
+  <link rel="stylesheet" href="ticketStyle.css">
+</head>
+<body>
+  <div id="google_translate_element"></div>
+  "holla"
+<script>
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+  <div class="ticket-form">
+    <h1>Ticket Reservation Service</h1>
+    <form id="ticketForm">
+      <label for="ticketType">Ticket Type:</label>
+      <select id="ticketType" required>
+        <option value="" disabled selected>Select a ticket type</option>
+        <option value="Adult">Adult</option>
+        <option value="Student">Student</option>
+        <option value="Child">Child</option>
+      </select>
+      
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="date">Date of Visit:</label>
+      <input type="date" id="date" required>
+
+      <label for="place">Place to Visit:</label>
+      <input type="text" id="place" required>
+
+      <button type="submit">Reserve Ticket</button>
+      <button type="button" id="downloadTicket">Download Ticket (PDF)</button>
+    </form>
+  </div>
+
+  <div id="ticketDetails" class="ticket-details">
+    <h2>Your Ticket Details</h2>
+    <div id="ticketInfo"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="ticketScript.js"></script>
+</body>
+</html>
